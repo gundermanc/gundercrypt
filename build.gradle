@@ -1,0 +1,17 @@
+// GunderCrypt Build Script.
+// (C) 2015 Christian Gunderman
+apply plugin: 'java'
+apply plugin:'application'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.gundersoft.gundercrypt.GunderCryptCli'
+    }
+}

@@ -1,0 +1,34 @@
+GunderCrypt Toy Text Cipher
+(C)2012-2015 Christian Gunderman
+Formerly at sourceforge.net/p/gundercrypt
+
+This is a toy cipher class implementing pseudo-random shifting, combined with password protected letter shifts (GunderCrypt.java) that may be embedded in your project to provide simple ciphering for any A-Z text messages. Note: I make no guaruntees about the security of this code. It should not be used as a replacement for actual encryption.
+
+Important Details:
+ - Released under latest GNU GPL license
+ - Use GunderCrypt.encodeString() and GunderCrypt.decodeString() to encrypt your Strings.
+ - GunderCryptCli.java is a command line interface that demonstrates functionality.
+ - Messages are encrypted more securely the more words that are present.
+ - Passwords must be ONLY uppercase letters and spaces. No lowercase or numbers.
+
+Building:
+ - Install gradle build system - UBUNTU - sudo apt-get install gradle
+                               - Download from gradle.org under Windows.
+ - Build                       - gradle build
+
+Run:
+ java -jar build/libs/gundercrypt.jar encode "I love cookies" "PASSWORD"
+
+   It will respond something similar to following (though it can be VERY different each time due to the pseudo random encryption algorithm):
+   
+   FRrVU Mztqh HlqhutmfLiE
+
+   To decode the text, run GunderCryptCli like so:
+   ./GunderCrypt.jar decode "FRrVU Mztqh HlqhutmfLiE" "PASSWORD"
+
+
+Enjoy! :)
+
+If you have any questions, feel free to email at:
+
+gundermanc@gmail.com
